@@ -1,0 +1,323 @@
+/* =====================================================================
+   TARS – UNIVERSAL AI DATA ANALYTICS PLATFORM
+   CLOUDY SKY DESIGN SYSTEM (Power BI & ChatGPT Theme)
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-main: #CBDDE9;
+  --bg-secondary: #D8E7F1;
+  --bg-card: #F4F8FC;
+  --bg-card-pure: #FFFFFF;
+  
+  --primary-blue: #1F6FAF;
+  --dark-blue: #0D4D7A;
+  --accent-blue: #3B82F6;
+  --light-accent: #EAF4FB;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  
+  --text-primary: #0F2942;
+  --text-secondary: #5B7A90;
+  
+  --border-color: rgba(31, 111, 175, 0.18);
+  --border-hover: rgba(31, 111, 175, 0.4);
+  
+  --shadow-sm: 0 2px 8px rgba(13, 77, 122, 0.06);
+  --shadow-md: 0 6px 20px -2px rgba(13, 77, 122, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(216, 231, 241, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 111, 175, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* Glass Panels & Power BI Workspace Cards */
+.glass-panel {
+  background: rgba(244, 248, 252, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.pbi-card {
+  background: var(--bg-card-pure);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+.pbi-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  border: none;
+  cursor: pointer;
+  padding: 0.65rem 1.25rem;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #185E96, #0A3C60);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  padding: 0.65rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+.btn-secondary:hover {
+  background: var(--light-accent);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.btn-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.6rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-icon:hover {
+  background: var(--light-accent);
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+/* Voice Input Pulsing */
+.mic-pulsing {
+  background: #EF4444 !important;
+  color: #FFFFFF !important;
+  animation: micPulse 1.2s infinite alternate;
+}
+@keyframes micPulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); }
+  100% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+}
+
+/* Form Controls */
+.glass-input {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  outline: none;
+  padding: 0.65rem 1rem;
+}
+.glass-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(31, 111, 175, 0.18);
+}
+
+/* Navigation Tabs */
+.nav-tab-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 0.85rem;
+  font-weight: 600;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.nav-tab-item:hover {
+  color: var(--primary-blue);
+  background: rgba(234, 244, 251, 0.8);
+}
+.nav-tab-item.active {
+  background: #FFFFFF;
+  color: var(--primary-blue);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+/* Table Styling */
+.tars-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.tars-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+.tars-table th {
+  background: var(--light-accent);
+  color: var(--dark-blue);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+.tars-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(31, 111, 175, 0.08);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.tars-table tr:hover td {
+  background: rgba(234, 244, 251, 0.6);
+}
+
+/* Badges */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.badge-blue { background: var(--light-accent); color: var(--primary-blue); border: 1px solid rgba(31, 111, 175, 0.2); }
+.badge-green { background: rgba(16, 185, 129, 0.12); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.25); }
+.badge-amber { background: rgba(245, 158, 11, 0.12); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.25); }
+
+/* Chat Bubbles (ChatGPT Natural Style) */
+.chat-bubble-user {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: #FFFFFF;
+  border-radius: 1.25rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.85rem 1.25rem;
+  max-width: 80%;
+  margin-left: auto;
+  box-shadow: 0 4px 12px rgba(31, 111, 175, 0.15);
+  font-size: 0.875rem;
+}
+
+.chat-bubble-ai {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem 1.25rem 1.25rem 0.25rem;
+  padding: 1.25rem;
+  max-width: 96%;
+  box-shadow: var(--shadow-sm);
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.chat-insight-box {
+  background: var(--light-accent);
+  border-left: 4px solid var(--primary-blue);
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Typing Indicator */
+.typing-dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  animation: typing 1.4s infinite ease-in-out both;
+  margin: 0 2px;
+}
+.typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+.typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Correlation Heatmap Grid */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  background: var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.heatmap-cell {
+  background: #FFFFFF;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

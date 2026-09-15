@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+matplotlib
+ollama
+duckdb
+openpyxl
+scikit-learn
+scipy
+flask
+flask-cors
